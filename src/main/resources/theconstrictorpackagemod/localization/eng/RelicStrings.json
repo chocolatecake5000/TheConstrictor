@@ -1,0 +1,81 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:ConstrictEnemies": {
+    "NAME": "Pollution",
+    "FLAVOR": "Yummy Black Liquid",
+    "DESCRIPTIONS": [
+      "At the start of each combat, apply 4 #ytheconstrictor:Constricting to ALL enemies.",
+      ""
+    ]
+  },
+  "${modID}:Rockfish": {
+    "NAME": "Rockfish",
+    "FLAVOR": "The Hardest and strongest of all fish. Nom nom nom.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, Gain 1 #yStrength and 1 #yDexterity.",
+      ""
+    ]
+  },
+  "${modID}:StrangeRing": {
+    "NAME": "StrangeRing",
+    "FLAVOR": "Very hard to eat and tasteless. 0/10.",
+    "DESCRIPTIONS": [
+      "Gain 1 Energy at the start of each turn. NL At the start of each combat, Gain 10 #ytheconstrictor:Constricting.",
+      ""
+    ]
+  },
+  "${modID}:SlimyShield": {
+    "NAME": "Slimy Shield",
+    "FLAVOR": "Proof of victory in a hard fought battle.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, reduce your #ytheconstrictor:Constricting by 6.",
+      ""
+    ]
+  },
+  "${modID}:MarineBiologist": {
+    "NAME": "Marine Biologist",
+    "FLAVOR": "Eyes the color of the ocean. They reminds me of home.",
+    "DESCRIPTIONS": [
+      "At the start of combat gain 1 #ytheconstrictor:Blur",
+      ""
+    ]
+  },
+  "${modID}:LilFriend": {
+    "NAME": "Lil Friend",
+    "FLAVOR": "Maybe I judged you too harshly. Tag along if you wish.",
+    "DESCRIPTIONS": [
+      "At the start of combat add 3 #ytheconstrictor:LilHit to your hand.",
+      ""
+    ]
+  },
+  "${modID}:SmudgedStone": {
+    "NAME": "Smudged Stone",
+    "FLAVOR": "Hard to eat, not that pretty. What's the point?",
+    "DESCRIPTIONS": [
+      "Whenever you play 12 cards, Gain 1 #ytheconstrictor:Blur.",
+      ""
+    ]
+  },
+  "${modID}:PolishedRelic": {
+    "NAME": "Polished Relic",
+    "FLAVOR": "Well cared for by The Collector.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw 2 additional cards and heal 6 HP.",
+      ""
+    ]
+  },
+  "${modID}:DustyRelic": {
+    "NAME": "Dusty Relic",
+    "FLAVOR": "Seems familiar.",
+    "DESCRIPTIONS": [
+      "At the start of each combat, draw 1 additional card and heal 3 HP.",
+      ""
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "PROPER_NAME": "Constricting",
+    "NAMES": [
+      "constricting",
+      "detected",
+      "in",
+      "the",
+      "text"
+    ],
+    "DESCRIPTION": "Constricted characters lose HP after damage is dealt."
+  },
+  {
+    "PROPER_NAME": "Blur",
+    "NAMES": [
+      "blur"
+    ],
+    "DESCRIPTION": "Block is not removed at the start of your next turn."
+  },
+  {
+  "PROPER_NAME": "LilHit",
+  "NAMES": ["lilhit"],
+  "DESCRIPTION": "A 0 cost card that deals 3 damage, grants 3 block, draws one card, and Exhausts."
+  },
+  {
+  "PROPER_NAME": "RisingWater",
+  "NAMES": [
+    "risingwater"
+],
+  "DESCRIPTION": " At the end of your turn increase by one and deal damage to ALL enemies."
+  },
+
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces. In card text, you'll use the underscore versions."
+  }
+]
