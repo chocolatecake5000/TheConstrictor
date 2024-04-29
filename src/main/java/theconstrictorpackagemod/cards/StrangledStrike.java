@@ -14,6 +14,7 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
+import static java.lang.Math.abs;
 import static theconstrictorpackagemod.theconstrictormod.makeID;
 
 public class StrangledStrike extends BaseCard {
@@ -22,7 +23,7 @@ public class StrangledStrike extends BaseCard {
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
@@ -33,8 +34,10 @@ public class StrangledStrike extends BaseCard {
         super(cardInfo);
         tags.add(CardTags.STRIKE);
         this.baseDamage = 6;
-        this.baseMagicNumber = (2);
+        this.baseMagicNumber = (1);
         this.magicNumber = this.baseMagicNumber;
+        this.exhaust = true;
+        this.upgRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
@@ -48,7 +51,7 @@ public class StrangledStrike extends BaseCard {
         AbstractPower ConPower = AbstractDungeon.player.getPower(ConstrictingPower.POWER_ID);
         int actualBaseDamage = this.baseDamage;
         if (ConPower != null) {
-            this.baseDamage += ConPower.amount * this.magicNumber;
+            this.baseDamage += abs(ConPower.amount) * this.magicNumber;
         }
 
         super.applyPowers();
@@ -63,7 +66,7 @@ public class StrangledStrike extends BaseCard {
         AbstractPower ConPower = AbstractDungeon.player.getPower(ConstrictingPower.POWER_ID);
         int actualBaseDamage = this.baseDamage;
         if (ConPower != null) {
-            this.baseDamage += ConPower.amount * this.magicNumber;
+            this.baseDamage += abs(ConPower.amount) * this.magicNumber;
         }
 
         super.calculateCardDamage(mo);
@@ -71,13 +74,7 @@ public class StrangledStrike extends BaseCard {
         this.isDamageModified = this.baseDamage != this.damage;
 
     }
-    public void upgrade() {
-        if (!this.upgraded) {
-            this.upgradeName();
-            this.upgradeMagicNumber(1);
-        }
 
-    }
 
 }
 

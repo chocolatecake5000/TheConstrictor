@@ -31,6 +31,7 @@ public class SweptAway extends BaseCard {
     public SweptAway() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
+        isMultiDamage = true;
 
     }
 

@@ -18,6 +18,13 @@
     "DESCRIPTION": "Block is not removed at the start of your next turn."
   },
   {
+  "PROPER_NAME": "AbsoluteValue",
+  "NAMES": [
+  "absolutevalue"
+],
+  "DESCRIPTION": "Absolute value is a numbers distance from 0."
+  },
+  {
   "PROPER_NAME": "LilHit",
   "NAMES": ["lilhit"],
   "DESCRIPTION": "A 0 cost card that deals 3 damage, grants 3 block, draws one card, and Exhausts."

@@ -22,21 +22,25 @@ public class TidalWave extends BaseCard {
             MyCharacter.Enums.CARD_COLOR);
 
 
+
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 6;
 
 
+
     public TidalWave() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
+        isMultiDamage = true;
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+
 
     }
 

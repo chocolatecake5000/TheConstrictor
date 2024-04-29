@@ -52,6 +52,8 @@ public class MyCharacter extends CustomPlayer {
     private static final String[] TEXT = characterStrings.TEXT;
 
     //Image file paths
+
+    private static final String SUPEREPICCHARACTER = characterPath("constrictorbasic.png"); //Shoulder 1 and 2 are used at rest sites.
     private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
     private static final String SHOULDER_2 = characterPath("shoulder2.png");
     private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
@@ -70,9 +72,9 @@ public class MyCharacter extends CustomPlayer {
     public MyCharacter() {
         super(NAMES[0], Enums.theconstrictor,
                 new CustomEnergyOrb(null, null, null), //Energy Orb
-                new SpriterAnimation(characterPath("animation/default.scml"))); //Animation
+                null,null); //Animation
 
-        initializeClass(null,
+        initializeClass(SUPEREPICCHARACTER,
                 SHOULDER_2,
                 SHOULDER_1,
                 CORPSE,

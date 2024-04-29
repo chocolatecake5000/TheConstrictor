@@ -22,7 +22,7 @@ public class IntoIt extends BaseCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.SPECIAL,
+            CardRarity.COMMON,
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
@@ -51,6 +51,21 @@ public class IntoIt extends BaseCard {
 
         }
         super.applyPowers();
+        this.baseBlock = Block;
+        this.isBlockModified = this.baseBlock != this.block;
+    }
+
+    public void calculateCardDamage(AbstractMonster mo) {
+        AbstractPower ConPower = AbstractDungeon.player.getPower(ConstrictingPower.POWER_ID);
+        int Block = this.baseBlock;
+        if (ConPower != null) {
+            if (ConPower.amount > 0) {
+                this.baseBlock = this.magicNumber;
+            }
+
+
+        }
+        super.calculateCardDamage(mo);
         this.baseBlock = Block;
         this.isBlockModified = this.baseBlock != this.block;
     }

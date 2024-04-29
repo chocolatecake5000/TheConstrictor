@@ -87,7 +87,8 @@
   },
   "${modID}:Chess": {
     "NAME": "Chess",
-    "DESCRIPTION": "Next turn draw 1 extra card and gain 1 extra [E]."
+    "DESCRIPTION": "Next turn draw 1 extra card and gain 1 extra [E].",
+    "UPGRADE_DESCRIPTION": "Next turn draw 2 extra cards and gain 1 extra [E]."
   },
   "${modID}:SlackTide": {
     "NAME": "Slack Tide",
@@ -141,7 +142,8 @@
   },
   "${modID}:Hunger": {
     "NAME": "Hunger",
-    "DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! Cards."
+    "DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! Card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! Cards."
   },
   "${modID}:Painless": {
     "NAME": "Painless",
@@ -156,6 +158,11 @@
     "NAME": "Envy",
     "DESCRIPTION": "Innate. NL Draw !M! cards. NL Gain 2 theconstrictor:Constricting. NL Exhaust."
   },
+  "${modID}:FadedSeal": {
+    "NAME": "Faded Seal",
+    "DESCRIPTION": "Unplayable. NL On *Exhaust Gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "*Retain. NL Unplayable. NL  On *Exhaust Gain !B! Block."
+  },
   "${modID}:LoadOff": {
     "NAME": "Load Off",
     "DESCRIPTION": "At the end of your turn reduce your theconstrictor:Constricting by !M!.",
@@ -166,9 +173,18 @@
     "DESCRIPTION": "Unplayable. NL If this card is Exhausted add A Last Gasp to your hand.",
     "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted add A Last Gasp to your hand."
   },
+  "${modID}:StickyPenny": {
+    "NAME": "Sticky Penny",
+    "DESCRIPTION": "Gain 10 gold. NL If your theconstrictor:Constricting is positive draw 3 cards. NL *Exhaust.",
+    "UPGRADE_DESCRIPTION": "*Retain. NL Gain 10 gold. NL If your theconstrictor:Constricting is positive draw 3 cards. NL *Exhaust."
+  },
   "${modID}:TastyKelp": {
     "NAME": "Tasty Kelp",
     "DESCRIPTION": "Gain !M! Regen."
+  },
+  "${modID}:Flow": {
+    "NAME": "Flow",
+    "DESCRIPTION": "Gain !B! Block. NL If your theconstrictor:Constricting is positive Gain [E] and draw a card."
   },
   "${modID}:HideInHelmet": {
     "NAME": "Hide In Helmet",
@@ -180,7 +196,8 @@
   },
   "${modID}:StrangledStrike": {
     "NAME": "Strangled Strike",
-    "DESCRIPTION": "Deal !D! damage. NL theconstrictor:Constricting affects this card !M! times."
+    "DESCRIPTION": "Deal !D! damage. NL The theconstrictor:AbsoluteValue of your theconstrictor:Constricting affects this card. NL *Exhaust.",
+    "UPGRADE_DESCRIPTION": "*Retain. NL Deal !D! damage. NL The theconstrictor:AbsoluteValue of your theconstrictor:Constricting affects this card. NL *Exhaust."
   },
   "${modID}:EldrichForm": {
     "NAME": "Eldrich Form",

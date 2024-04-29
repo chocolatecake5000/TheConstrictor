@@ -33,6 +33,7 @@ public class FairFight extends BaseCard {
         this.baseDamage = 0;
         this.baseMagicNumber = (4);
         this.magicNumber = this.baseMagicNumber;
+        isMultiDamage = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

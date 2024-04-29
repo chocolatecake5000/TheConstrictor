@@ -36,7 +36,7 @@ public class GoldenWave extends BaseCard {
         this.exhaust = true;
         setDamage(DAMAGE,UPG_DAMAGE);
         setBlock(BLOCK,UPG_BLOCK);
-
+        isMultiDamage = true;
     }
 
     @Override

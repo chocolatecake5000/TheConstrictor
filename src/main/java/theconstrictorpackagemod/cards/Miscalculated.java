@@ -33,7 +33,7 @@ public class Miscalculated extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
             this.addToBot(new GainEnergyAction(magicNumber));
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConstrictingPower(AbstractDungeon.player, p, 2), 2));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConstrictingPower(AbstractDungeon.player, p, 4), 4));
     }
 
 

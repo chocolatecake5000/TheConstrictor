@@ -33,7 +33,7 @@ public class Hunger extends BaseCard {
     public Hunger() {
         super(cardInfo);
         setBlock(BLOCK,UPG_BLOCK);
-setMagic(2,1);
+setMagic(1,1);
     }
 
     @Override

@@ -15,7 +15,7 @@ import static theconstrictorpackagemod.theconstrictormod.makeID;
 public class Flood extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Flood",
-            1,
+            2,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.UNCOMMON,

@@ -22,7 +22,7 @@ public class MyCard2 extends BaseCard {
             0,
             CardType.SKILL,
             CardTarget.ALL,
-            CardRarity.COMMON,
+            CardRarity.BASIC,
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);

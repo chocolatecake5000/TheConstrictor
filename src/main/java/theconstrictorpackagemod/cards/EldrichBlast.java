@@ -36,6 +36,7 @@ public class EldrichBlast extends BaseCard {
     public EldrichBlast() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
+        isMultiDamage = true;
         this.exhaust = true;
     }
 

@@ -1,6 +1,8 @@
 package theconstrictorpackagemod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.badlogic.gdx.graphics.Color;
+import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.HealthBarRenderPower;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
@@ -9,7 +11,7 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static theconstrictorpackagemod.theconstrictormod.makeID;
 
-public class ConstrictingPower extends BasePower implements CloneablePowerInterface {
+public class ConstrictingPower extends BasePower implements CloneablePowerInterface,HealthBarRenderPower {
     public static final String POWER_ID = makeID("ConstrictingPower");
     private static final AbstractPower.PowerType TYPE = PowerType.DEBUFF;
     private static final boolean TURN_BASED = true;
@@ -21,6 +23,7 @@ public class ConstrictingPower extends BasePower implements CloneablePowerInterf
     public ConstrictingPower(AbstractCreature owner, AbstractCreature abstractCreature, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
         canGoNegative=true;
+
     }
 
     public void atEndOfTurn(boolean isPlayer) {
@@ -40,4 +43,13 @@ public class ConstrictingPower extends BasePower implements CloneablePowerInterf
         return new ConstrictingPower(owner, this.owner, amount);
     }
 
+    @Override
+    public int getHealthBarAmount() {
+        return amount;
+    }
+
+    @Override
+    public Color getColor() {
+        return Color.valueOf(("#2c971d"));
+    }
 }
