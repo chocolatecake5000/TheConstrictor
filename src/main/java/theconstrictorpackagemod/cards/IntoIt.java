@@ -27,13 +27,10 @@ public class IntoIt extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
-
     public IntoIt() {
         super(cardInfo);
         this.baseBlock = 3;
-        this.baseMagicNumber = (12);
+        this.baseMagicNumber = (9);
         this.magicNumber = this.baseMagicNumber;
     }
 

@@ -11,7 +11,8 @@
   },
   "${modID}:MyCard": {
     "NAME": "Lil Hit",
-    "DESCRIPTION": "Draw !M!. NL Gain !B! Block. NL Deal !D! damage. NL *Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Deal !D! damage. NL Draw !M! cards. NL Exhaust."
   },
   "${modID}:ConstrictStrike": {
     "NAME": "Constricting Strike",
@@ -19,15 +20,15 @@
   },
   "${modID}:DustyShiv": {
     "NAME": "Dusty Shiv",
-    "DESCRIPTION": "Apply !M! theconstrictor:Constricting. NL Deal !D! damage. NL *Exhaust."
+    "DESCRIPTION": "Apply !M! theconstrictor:Constricting. NL Deal !D! damage. NL Exhaust."
   },
   "${modID}:GoldenWave": {
     "NAME": "Golden Wave",
-    "DESCRIPTION": "Deal !D! damage to all X Times. NL Gain !B! Block X Times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Exhaust."
   },
   "${modID}:Thirst": {
     "NAME": "Thirst",
-    "DESCRIPTION": "Obtain a Duplication Potion. NL Exhaust."
+    "DESCRIPTION": "Obtain a *Duplication *Potion. NL Exhaust."
   },
   "${modID}:Memory": {
     "NAME": "Memory",
@@ -35,14 +36,15 @@
   },
   "${modID}:ShieldSlammer": {
     "NAME": "Shield Slammer",
-    "DESCRIPTION": "Deal damage equal to your Block."
+    "DESCRIPTION": "Deal damage equal to your Block. NL ",
+    "UPGRADE_DESCRIPTION": "(Deals !D! damage.)"
   },
   "${modID}:Sadistic": {
     "NAME": "Sadistic",
     "DESCRIPTION": "Whenever you apply a debuff to an enemy, they take !M! damage."
   },
   "${modID}:SharkSlap": {
-    "NAME": "SharkSlap",
+    "NAME": "Shark Slap",
     "DESCRIPTION": "Deal !D! damage. NL Apply !M! Vulnerable."
   },
   "${modID}:BaseStrikePog": {
@@ -62,7 +64,7 @@
     "DESCRIPTION": "Gain !B! Block. NL Gain !M! Gold. NL Exhaust."
   },
   "${modID}:Multihit": {
-    "NAME": "Smack Em'",
+    "NAME": "Smack 'Em",
     "DESCRIPTION": "Deal !D! damage 3 times."
   },
   "${modID}:Glasses": {
@@ -82,13 +84,13 @@
     "DESCRIPTION": "Deal !D! damage to ALL enemies."
   },
   "${modID}:RustyKnife": {
-    "NAME": "RustyKnife",
+    "NAME": "Rusty Knife",
     "DESCRIPTION": "Deal !D! damage. NL If Fatal, permanently increase this card's damage by !M!. NL Exhaust."
   },
   "${modID}:Chess": {
     "NAME": "Chess",
-    "DESCRIPTION": "Next turn draw 1 extra card and gain 1 extra [E].",
-    "UPGRADE_DESCRIPTION": "Next turn draw 2 extra cards and gain 1 extra [E]."
+    "DESCRIPTION": "Next turn, draw 1 card and gain [E].",
+    "UPGRADE_DESCRIPTION": "Next turn, draw 2 cards and gain [E]."
   },
   "${modID}:SlackTide": {
     "NAME": "Slack Tide",
@@ -104,29 +106,29 @@
   },
   "${modID}:FairFight": {
     "NAME": "Fair Fight",
-    "DESCRIPTION": "Gain !M! theconstrictor:RisingWater. NL Deal damage = to theconstrictor:RisingWater."
+    "DESCRIPTION": "Gain !M! theconstrictor:Rising_Water. NL Deal damage to ALL enemies equal to your theconstrictor:Rising_Water."
   },
   "${modID}:Mine": {
     "NAME": "Mine",
-    "DESCRIPTION": "Put a card from your draw pile into your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Put a card from your draw pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Put 1 card from your draw pile into your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Put 1 card from your draw pile into your hand. NL Exhaust."
   },
   "${modID}:Flood": {
     "NAME": "Flood",
-    "DESCRIPTION": "Innate. NL Gain !M! theconstrictor:RisingWater."
+    "DESCRIPTION": "Innate. NL Gain !M! theconstrictor:Rising_Water."
   },
   "${modID}:ColdShower": {
     "NAME": "Cold Shower",
-    "DESCRIPTION": "Reduce your theconstrictor:Constricting by !M!. NL Exhaust a random card in your hand.",
-    "UPGRADE_DESCRIPTION": "Reduce your theconstrictor:Constricting by !M!. NL Exhaust a card in your hand."
+    "DESCRIPTION": "Lose !M! theconstrictor:Constricting. NL Exhaust a random card in your hand.",
+    "UPGRADE_DESCRIPTION": "Lose !M! theconstrictor:Constricting. NL Exhaust a card in your hand."
   },
   "${modID}:CoolOff": {
     "NAME": "Cool Off",
-    "DESCRIPTION": "Gain !B! Block. NL Gain [E] next turn."
+    "DESCRIPTION": "Gain !B! Block. NL Next turn, gain [E]."
   },
   "${modID}:RoleReversal": {
     "NAME": "Role Reversal",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! theconstrictor:RisingWater. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! theconstrictor:Rising_Water. NL Exhaust."
   },
   "${modID}:SweptAway": {
     "NAME": "Swept Away",
@@ -137,20 +139,20 @@
     "DESCRIPTION": "Apply !M! Weak. NL Apply !M! Vulnerable. NL Draw !M! cards. NL *Exhaust."
   },
   "${modID}:EldrichBlast": {
-    "NAME": "Eldrich Blast",
-    "DESCRIPTION": "Deal !D! Damage to all enemies. NL Exhaust."
+    "NAME": "Eldritch Blast",
+    "DESCRIPTION": "Deal !D! damage to all enemies. NL Exhaust."
   },
   "${modID}:Hunger": {
     "NAME": "Hunger",
-    "DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! Card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! Cards."
+    "DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! card.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! cards."
   },
   "${modID}:Painless": {
     "NAME": "Painless",
     "DESCRIPTION": "Whenever a card is Exhausted, gain !M! Block."
   },
   "${modID}:ClearHead": {
-    "NAME": "ClearHead",
+    "NAME": "Clear Head",
     "DESCRIPTION": "Deal !D! damage. NL Exhaust a random card in your hand.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Exhaust a card in your hand."
   },
@@ -160,23 +162,22 @@
   },
   "${modID}:FadedSeal": {
     "NAME": "Faded Seal",
-    "DESCRIPTION": "Unplayable. NL On *Exhaust Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "*Retain. NL Unplayable. NL  On *Exhaust Gain !B! Block."
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !B! Block.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Unplayable. NL If this card is Exhausted, gain !B! Block."
   },
   "${modID}:LoadOff": {
     "NAME": "Load Off",
-    "DESCRIPTION": "At the end of your turn reduce your theconstrictor:Constricting by !M!.",
-    "UPGRADE_DESCRIPTION": "At the end of your turn reduce your theconstrictor:Constricting by !M!."
+    "DESCRIPTION": "At the end of your turn, lose !M! theconstrictor:Constricting."
   },
   "${modID}:Headache": {
     "NAME": "Headache",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted add A Last Gasp to your hand.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted add A Last Gasp to your hand."
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add *A *Last *Gasp into your hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted, add *A *Last *Gasp into your hand."
   },
   "${modID}:StickyPenny": {
     "NAME": "Sticky Penny",
-    "DESCRIPTION": "Gain 10 gold. NL If your theconstrictor:Constricting is positive draw 3 cards. NL *Exhaust.",
-    "UPGRADE_DESCRIPTION": "*Retain. NL Gain 10 gold. NL If your theconstrictor:Constricting is positive draw 3 cards. NL *Exhaust."
+    "DESCRIPTION": "Gain 10 Gold. NL If your theconstrictor:Constricting is positive, draw 3 cards. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "*Retain. NL Gain 10 Gold. NL If your theconstrictor:Constricting is positive, draw 3 cards. NL Exhaust."
   },
   "${modID}:TastyKelp": {
     "NAME": "Tasty Kelp",
@@ -184,11 +185,11 @@
   },
   "${modID}:Flow": {
     "NAME": "Flow",
-    "DESCRIPTION": "Gain !B! Block. NL If your theconstrictor:Constricting is positive Gain [E] and draw a card."
+    "DESCRIPTION": "Gain !B! Block. NL If your theconstrictor:Constricting is positive, gain [E] and draw 1 card."
   },
   "${modID}:HideInHelmet": {
     "NAME": "Hide In Helmet",
-    "DESCRIPTION": "At the end of your turn gain !M! Block."
+    "DESCRIPTION": "At the end of your turn, gain !M! Block."
   },
   "${modID}:FroggyMode": {
     "NAME": "Froggy Mode",
@@ -196,18 +197,18 @@
   },
   "${modID}:StrangledStrike": {
     "NAME": "Strangled Strike",
-    "DESCRIPTION": "Deal !D! damage. NL The theconstrictor:AbsoluteValue of your theconstrictor:Constricting affects this card. NL *Exhaust.",
-    "UPGRADE_DESCRIPTION": "*Retain. NL Deal !D! damage. NL The theconstrictor:AbsoluteValue of your theconstrictor:Constricting affects this card. NL *Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL The theconstrictor:Absolute_Value of your theconstrictor:Constricting affects this card. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL The theconstrictor:Absolute_Value of your theconstrictor:Constricting affects this card. NL Exhaust."
   },
   "${modID}:EldrichForm": {
-    "NAME": "Eldrich Form",
-    "DESCRIPTION": "At the start of your turn add an Eldrich Blast to your hand.",
-    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn add an Eldrich Blast to your hand."
+    "NAME": "Eldritch Form",
+    "DESCRIPTION": "At the start of your turn, add an *Eldritch Blast into your hand.",
+    "UPGRADE_DESCRIPTION": "Innate. NL At the start of your turn, add an *Eldritch Blast into your hand."
   },
   "${modID}:LastGasp": {
     "NAME": "Last Gasp",
-    "DESCRIPTION": "Draw 2 Cards. NL Gain [E]. NL *Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Draw 2 Cards. NL Gain [E]. NL *Exhaust."
+    "DESCRIPTION": "Draw 2 cards. NL Gain [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "Innate. NL Draw 2 cards. NL Gain [E]. NL cExhaust."
   },
   "${modID}:Evolution": {
     "NAME": "Evolution",
@@ -216,8 +217,8 @@
   },
   "${modID}:InfiniteDust": {
     "NAME": "Infinite Dust",
-    "DESCRIPTION": "At the start of your turn add a *Dusty Shiv into your hand.",
-    "UPGRADE_DESCRIPTION": "At the start of your turn add a *Dusty Shiv into your hand. NL Add a *Dusty Shiv into your hand."
+    "DESCRIPTION": "At the start of your turn, add a *Dusty Shiv into your hand.",
+    "UPGRADE_DESCRIPTION": "At the start of your turn, add a *Dusty Shiv into your hand. NL Add a *Dusty Shiv into your hand."
   },
   "${modID}:ShinyFish": {
     "NAME": "Shiny Fish",
@@ -230,7 +231,7 @@
   },
   "${modID}:BigLilHit": {
     "NAME": "Big Lil Hit",
-    "DESCRIPTION": "Add !M! *Lil *Hit to your hand. NL *Exhaust."
+    "DESCRIPTION": "Add !M! *Lil *Hit into to your hand. NL Exhaust."
   },
   "${modID}:Smother": {
     "NAME": "Smother",
@@ -238,28 +239,27 @@
   },
   "${modID}:BufferedSlam": {
     "NAME": "Buffered Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Prevent the next time you would lose HP this combat. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Prevent the next time you would lose HP. NL Exhaust."
   },
-
   "${modID}:MyCard2": {
     "NAME": "Muddy Water",
-    "DESCRIPTION": "Apply !M! theconstrictor:Constricting to ALL. NL Gain !B! Block."
+    "DESCRIPTION": "Apply !M! theconstrictor:Constricting to EVERYONE. NL Gain !B! Block."
   },
   "${modID}:EldrichAnger": {
     "NAME": "Eldritch Anger",
-    "DESCRIPTION": "Apply !M! theconstrictor:Constricting to ALL. NL Gain !B! Block."
+    "DESCRIPTION": "Apply !M! theconstrictor:Constricting to EVERYONE. NL Gain !B! Block."
   },
   "${modID}:Miscalculated": {
     "NAME": "Miscalculated",
-    "DESCRIPTION": "Gain !M! [E]. NL Gain 2 theconstrictor:Constricting."
+    "DESCRIPTION": "Gain !M! [E]. NL Gain 4 theconstrictor:Constricting."
   },
   "${modID}:DamSlam": {
     "NAME": "Dam Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! theconstrictor:RisingWater. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! theconstrictor:Rising_Water. NL Exhaust."
   },
   "${modID}:Tentacle": {
     "NAME": "Talk To The Tentacle",
-    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy gain !M! Block. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! Block. NL Exhaust."
   },
   "${modID}:Rest": {
     "NAME": "Rest",
@@ -271,28 +271,32 @@
   },
   "${modID}:IntoIt": {
     "NAME": "Into It",
-    "DESCRIPTION": "Gain 3 Block. NL If your theconstrictor:Constricting is positive gain !M! block instead.",
-    "UPGRADE_DESCRIPTION": "Gain 3 Block. NL If your theconstrictor:Constricting is positive gain !M! block instead."
+    "DESCRIPTION": "Gain 3 Block. NL If your theconstrictor:Constricting is positive, gain !M! additional Block."
+  },
+  "${modID}:SecretCash": {
+    "NAME": "Secret Cache",
+    "DESCRIPTION": "Add !M! *Dusty Shivs into your hand."
   },
   "${modID}:Freedom": {
     "NAME": "Freedom",
-    "DESCRIPTION": "Retain. NL Reduce your theconstrictor:Constricting by 20. NL Exhaust."
+    "DESCRIPTION": "Retain. NL Lose 20 theconstrictor:Constricting. NL Exhaust."
   },
   "${modID}:ChumInTheWater": {
     "NAME": "Chum In The Water",
-    "DESCRIPTION": "Apply !M! theconstrictor:Constricting. NL When The enemy dies, deal damage equal to its max HP to ALL enemies."
+    "DESCRIPTION": "Apply !M! theconstrictor:Constricting. NL When the enemy dies, deal damage equal to its max HP to ALL enemies."
   },
   "${modID}:FishyShield": {
     "NAME": "Fishy Shield",
-    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Dusty Shiv To Your Hand."
+    "DESCRIPTION": "Gain !B! Block. NL Add !M! *Dusty Shiv into your hand.",
+    "UPGRADE_DESCRIPTION": "Gain !B! Block. NL Add !M! *Dusty Shivs into your hand."
   },
   "${modID}:DolfinDance": {
     "NAME": "Dolfin Dance",
     "DESCRIPTION": "Gain 1 Dexterity. NL Gain !M! theconstrictor:Blur."
   },
   "${modID}:HealAMid": {
-    "NAME": "StealAMid",
-    "DESCRIPTION": "Deal !M! Damage. NL Heal !M!. NL Exhaust."
+    "NAME": "Stealamid",
+    "DESCRIPTION": "Deal !D! damage. NL Heal !M! HP. NL Exhaust."
   },
   "${modID}:BlurryWater": {
     "NAME": "Blurry Water",
@@ -300,8 +304,8 @@
   },
   "${modID}:InkBlast": {
     "NAME": "Ink Blast",
-    "DESCRIPTION": "Apply 1 Weak. NL Apply 1 Vulnerable. Draw !M! Card.",
-    "UPGRADE_DESCRIPTION": "Apply 1 Weak. NL Apply 1 Vulnerable. Draw !M! Cards."
+    "DESCRIPTION": "Apply 1 Weak. NL Apply 1 Vulnerable. Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Apply 1 Weak. NL Apply 1 Vulnerable. Draw !M! cards."
   },
   "${modID}:AngelFishForm": {
     "NAME": "Angel Fish Form",
@@ -310,8 +314,8 @@
   },
   "${modID}:FroggyForm": {
     "NAME": "Froggy Form",
-    "DESCRIPTION": "Ethereal. NL At the end of your turn gain 1 Strength and 1 Dexterity.",
-    "UPGRADE_DESCRIPTION": "At the end of your turn gain 1 Strength and 1 Dexterity."
+    "DESCRIPTION": "Ethereal. NL At the end of your turn, gain 1 Strength and 1 Dexterity.",
+    "UPGRADE_DESCRIPTION": "At the end of your turn, gain 1 Strength and 1 Dexterity."
   },
   "${modID}:ReturnStrike": {
     "NAME": "Return Strike",
@@ -323,17 +327,13 @@
     "DESCRIPTION": "Whenever a card is created during combat, Upgrade it.",
     "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card is created during combat, Upgrade it."
   },
-  "${modID}:SecretCash": {
-    "NAME": "Secret Cache",
-    "DESCRIPTION": "Add !M! *Dusty Shiv To Your Hand."
-  },
   "${modID}:SwordfishSlam": {
     "NAME": "Swordfish Slam",
     "DESCRIPTION": "Deal !D! damage X times."
   },
   "${modID}:NotIntoIt": {
     "NAME": "Not Into It",
-    "DESCRIPTION": "Gain !B! Block. NL Reduce !M! theconstrictor:Constricting."
+    "DESCRIPTION": "Gain !B! Block. NL Lose !M! theconstrictor:Constricting."
   },
   "${modID}:BathTime": {
     "NAME": "Bath Time",
@@ -345,20 +345,19 @@
   },
   "${modID}:BreakFree": {
     "NAME": "Break Free",
-    "DESCRIPTION": "Deal !D! damage. NL Reduce !M! theconstrictor:Constricting.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Reduce !M! theconstrictor:Constricting."
+    "DESCRIPTION": "Deal !D! damage. NL Lose !M! theconstrictor:Constricting."
   },
   "${modID}:ShedSkin": {
     "NAME": "Shed Skin",
-    "DESCRIPTION": "Draw !M! Cards. NL Exhaust 1 card."
+    "DESCRIPTION": "Draw !M! cards. NL Exhaust 1 card."
   },
   "${modID}:PacificSailfishStrike": {
     "NAME": "Pacific Sailfish Strike",
-    "DESCRIPTION": "Deal !D! damage. Draw !M! Card.",
-    "UPGRADE_DESCRIPTION": "Deal !D! damage. Draw !M! Cards."
+    "DESCRIPTION": "Deal !D! damage. NL Draw !M! card.",
+    "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Draw !M! cards."
   },
   "${modID}:SmellyFish": {
     "NAME": "Smelly Fish",
-    "DESCRIPTION": "At the start of your turn apply !M! theconstrictor:Constricting to all enemies."
+    "DESCRIPTION": "At the start of your turn, apply !M! theconstrictor:Constricting to ALL enemies."
   }
 }

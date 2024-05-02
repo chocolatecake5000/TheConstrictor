@@ -2,11 +2,11 @@
   "${modID}:CharacterID": {
     "NAMES": [
       "The Constrictor",
-      "the constrictor"
+      "the Constrictor"
     ],
     "TEXT": [
       "An Elder God in training. NL Came to the spire searching for a purpose.",
-      " NL You Constrict The Heart",
+      " NL You constrict the heart...",
       "Navigating an unlit street, you come across several hooded figures in the midst of some dark ritual. As you approach, they turn to you in eerie unison. The tallest among them bares fanged teeth and extends a long, pale hand towards you. NL ~\"Join~ ~us~ ~slimy~ ~one,~ ~and~ ~feel~ ~the~ ~warmth~ ~of~ ~the~ ~Spire.\"~"
     ]
   }

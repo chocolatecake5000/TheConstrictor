@@ -23,9 +23,6 @@ public class EldrichForm extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
-
     public EldrichForm() {
         super(cardInfo);
         setMagic(1);

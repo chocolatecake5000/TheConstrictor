@@ -9,21 +9,23 @@
   "${modID}:InfiniteDustPower": {
     "NAME": "Infinite Dust",
     "DESCRIPTIONS": [
-      "At the start of your turn add #b",
-      " DustyShivs into your hand."
+      "At the start of your turn, add #b",
+      " #yDusty #yShivs into your hand.",
+      " #yDusty #yShiv into your hand."
     ]
   },
   "${modID}:EldrichFormPower": {
-    "NAME": "Eldrich Form",
+    "NAME": "Eldritch Form",
     "DESCRIPTIONS": [
-      "At the start of your turn add #b.",
-      " Eldrich Blast to your hand."
+      "At the start of your turn, add #b",
+      " #yEldrich #yBlasts into your hand.",
+      " #yEldrich #yBlast into your hand."
     ]
   },
   "${modID}:FroggyFormPower": {
     "NAME": "Froggy Form Power",
     "DESCRIPTIONS": [
-      "At the end of your turn gain #b",
+      "At the end of your turn, gain #b",
       " #yStrength and #b",
       " #yDexterity."
     ]
@@ -31,22 +33,22 @@
   "${modID}:RisingWater": {
     "NAME": "Rising Water",
     "DESCRIPTIONS": [
-      "At the end of your turn increase by one and deal #b",
-      " damage to ALL enemies."
+      "At the end of your turn, deal #b",
+      " damage to ALL enemies, then increase #yRising #yWater by #b1."
     ]
   },
   "${modID}:LoadOffPower": {
     "NAME": "Load Off",
     "DESCRIPTIONS": [
-      "At the start of your turn reduce your Constricted by #b",
-      "."
+      "At the end of your turn, lose #b",
+      " #yConstricting."
     ]
   },
   "${modID}:NotNoxious": {
     "NAME": "Smelly Fish",
     "DESCRIPTIONS": [
-      "At the start of your turn apply #b",
-      " #yConstricting to all enemies."
+      "At the start of your turn, apply #b",
+      " #yConstricting to ALL enemies."
     ]
   }
 }
