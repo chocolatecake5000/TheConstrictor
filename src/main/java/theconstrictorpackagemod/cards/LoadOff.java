@@ -33,6 +33,6 @@ public class LoadOff extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoadOffPower(AbstractDungeon.player,-magicNumber)));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new LoadOffPower(AbstractDungeon.player,magicNumber)));
     }
 }

@@ -17,11 +17,7 @@ public class BigLilHit extends BaseCard {
             CardRarity.RARE,
             MyCharacter.Enums.CARD_COLOR);
 
-
     public static final String ID = makeID(cardInfo.baseId);
-
-
-
 
     public BigLilHit() {
         super(cardInfo);

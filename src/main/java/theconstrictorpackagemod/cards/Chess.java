@@ -26,10 +26,6 @@ public class Chess extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
-
-
     public Chess() {
         super(cardInfo);
       setMagic(1,1);

@@ -40,10 +40,9 @@ public class MyCard extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DrawCardAction(magicNumber));
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-
+        addToBot(new DrawCardAction(magicNumber));
     }
 
 

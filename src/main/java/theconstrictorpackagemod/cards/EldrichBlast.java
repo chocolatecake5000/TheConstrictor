@@ -24,7 +24,7 @@ public class EldrichBlast extends BaseCard {
             CardType.ATTACK,
             CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
-            MyCharacter.Enums.CARD_COLOR);
+            CardColor.COLORLESS);
 
 
     public static final String ID = makeID(cardInfo.baseId);

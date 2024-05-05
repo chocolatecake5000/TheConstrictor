@@ -44,6 +44,7 @@ public class SludgeWave extends BaseCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
+        this.addToBot(new SFXAction("THUNDERCLAP", 0.05F));
         Iterator var3 = AbstractDungeon.getCurrRoom().monsters.monsters.iterator();
 
         AbstractMonster mo;

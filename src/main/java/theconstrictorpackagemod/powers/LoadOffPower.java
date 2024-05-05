@@ -33,7 +33,7 @@ public class LoadOffPower extends BasePower implements CloneablePowerInterface {
 
     public void atEndOfTurnPreEndTurnCards(boolean isPlayer) {
         this.flash();
-        this.addToBot(new ApplyPowerAction(this.owner, this.owner,new ConstrictingPower(this.owner, this.owner, amount)));
+        this.addToBot(new ApplyPowerAction(this.owner, this.owner,new ConstrictingPower(this.owner, this.owner, -amount)));
     }
 
     public void updateDescription() {
