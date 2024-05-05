@@ -36,8 +36,8 @@ public class ShedSkin extends BaseCard {
 
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new DrawCardAction(p, this.magicNumber));
         this.addToBot(new ExhaustAction(1, false));
+        this.addToBot(new DrawCardAction(p, this.magicNumber));
     }
 }
 

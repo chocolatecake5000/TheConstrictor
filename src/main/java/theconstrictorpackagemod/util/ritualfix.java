@@ -1,6 +1,9 @@
 package theconstrictorpackagemod.util;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.blue.GeneticAlgorithm;
+import com.megacrit.cardcrawl.cards.colorless.Madness;
+import theconstrictorpackagemod.cards.RustyKnife;
 
 import static com.megacrit.cardcrawl.helpers.CardLibrary.getCard;
 
@@ -9,7 +12,7 @@ public class ritualfix {
         AbstractCard source = getCard(key);// 994
         AbstractCard retVal = null;// 995
         if (source == null) {// 997
-            retVal = getCard("Madness").makeCopy();// 998
+            retVal = getCard(Madness.ID).makeCopy();// 998
         } else {
             retVal = getCard(key).makeCopy();// 1000
         }
@@ -20,13 +23,13 @@ public class ritualfix {
 
         retVal.misc = misc;// 1007
         if (misc != 0) {// 1008
-            if (retVal.cardID.equals("Genetic Algorithm")) {// 1009
+            if (retVal.cardID.equals(GeneticAlgorithm.ID)) {// 1009
                 retVal.block = misc;// 1010
                 retVal.baseBlock = misc;// 1011
                 retVal.initializeDescription();// 1012
             }
 
-            if (retVal.cardID.equals("RustyKnife.ID")) {// 1014
+            if (retVal.cardID.equals(RustyKnife.ID)) {// 1014
                 retVal.damage = misc;// 1015
                 retVal.baseDamage = misc;// 1016
                 retVal.initializeDescription();// 1017
