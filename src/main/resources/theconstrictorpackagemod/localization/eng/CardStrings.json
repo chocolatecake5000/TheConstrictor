@@ -349,7 +349,7 @@
   },
   "${modID}:ShedSkin": {
     "NAME": "Shed Skin",
-    "DESCRIPTION": "Draw !M! cards. NL Exhaust 1 card."
+    "DESCRIPTION": "Exhaust 1 card. NL Draw !M! cards."
   },
   "${modID}:PacificSailfishStrike": {
     "NAME": "Pacific Sailfish Strike",

@@ -54,4 +54,3 @@ public class RustyKnife extends BaseCard {
 
 
 }
-
