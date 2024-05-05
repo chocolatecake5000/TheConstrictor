@@ -1,35 +1,21 @@
-
 package theconstrictorpackagemod.cards;
 
-
 import characterclass.MyCharacter;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.GainEnergyAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import theconstrictorpackagemod.theconstrictormod;
 import theconstrictorpackagemod.util.CardInfo;
 
-import static theconstrictorpackagemod.theconstrictormod.makeID;
-
 public class FadedSeal extends BaseCard {
-    private final static CardInfo cardInfo = new CardInfo(
-            "FadedSeal",
-            -2,
-            CardType.SKILL,
-            CardTarget.SELF,
-            CardRarity.COMMON,
-            MyCharacter.Enums.CARD_COLOR);
-
-    public static final String ID = makeID(cardInfo.baseId);
-
+    private static final CardInfo cardInfo;
+    public static final String ID;
 
     public FadedSeal() {
         super(cardInfo);
-        setBlock(10,3);
-        upgRetain = true;
+        this.setBlock(10, 3);
+        this.upgRetain = true;
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
@@ -38,10 +24,14 @@ public class FadedSeal extends BaseCard {
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {
-
     }
 
     public void triggerOnExhaust() {
-        this.addToBot(new GainBlockAction(AbstractDungeon.player,AbstractDungeon.player,block));
+        this.addToBot(new GainBlockAction(AbstractDungeon.player, AbstractDungeon.player, this.block));
+    }
+
+    static {
+        cardInfo = new CardInfo("FadedSeal", -2, CardType.SKILL, CardTarget.SELF, CardRarity.COMMON, MyCharacter.Enums.CARD_COLOR);
+        ID = theconstrictormod.makeID(cardInfo.baseId);
     }
 }

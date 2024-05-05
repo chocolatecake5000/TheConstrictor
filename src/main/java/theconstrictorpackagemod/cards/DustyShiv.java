@@ -20,7 +20,7 @@ public class DustyShiv extends BaseCard {
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.SPECIAL,
-            MyCharacter.Enums.CARD_COLOR);
+            CardColor.COLORLESS);
 
     public static final String ID = makeID(cardInfo.baseId);
 
@@ -37,10 +37,8 @@ public class DustyShiv extends BaseCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        this.addToBot(new ApplyPowerAction(m, p, new ConstrictingPower(m, m, this.magicNumber), this.magicNumber));
-
+        addToBot(new ApplyPowerAction(m, p, new ConstrictingPower(m, m, this.magicNumber), this.magicNumber));
     }
 
 }

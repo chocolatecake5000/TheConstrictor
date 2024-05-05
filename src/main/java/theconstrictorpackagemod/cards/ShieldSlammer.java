@@ -43,12 +43,14 @@ public class ShieldSlammer extends BaseCard {
         this.baseDamage = AbstractDungeon.player.currentBlock;
         super.applyPowers();
         this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
         this.initializeDescription();
     }
 
     public void calculateCardDamage(AbstractMonster mo) {
         super.calculateCardDamage(mo);
         this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription = this.rawDescription + cardStrings.UPGRADE_DESCRIPTION;
         this.initializeDescription();
     }
 

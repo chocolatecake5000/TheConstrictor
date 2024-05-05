@@ -26,19 +26,17 @@ public class HealAMid extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
-
     public HealAMid() {
         super(cardInfo);
         this.exhaust = true;
+        setDamage(4, 2);
         setMagic(4,2);
         tags.add(CardTags.HEALING);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, magicNumber, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         this.addToBot(new HealAction(p, p, this.magicNumber));
     }
 }

@@ -30,7 +30,7 @@ public class ConstrictStrike extends BaseCard {
 
     public ConstrictStrike() {
         super(cardInfo);
-
+        tags.add(CardTags.STRIKE);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(2,2);
     }

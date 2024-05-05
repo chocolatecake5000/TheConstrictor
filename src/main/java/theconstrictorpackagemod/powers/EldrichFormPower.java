@@ -35,7 +35,11 @@ public class EldrichFormPower extends BasePower implements CloneablePowerInterfa
     }
 
     public void updateDescription() {
-        this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        if (this.amount > 1) {
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[1];
+        } else {
+            this.description = DESCRIPTIONS[0] + amount + DESCRIPTIONS[2];
+        }
     }
 
 

@@ -8,7 +8,7 @@
       "the",
       "text"
     ],
-    "DESCRIPTION": "Constricted characters lose HP after damage is dealt."
+    "DESCRIPTION": "Characters with Constricting take damage at the end of their turn."
   },
   {
     "PROPER_NAME": "Blur",
@@ -18,23 +18,27 @@
     "DESCRIPTION": "Block is not removed at the start of your next turn."
   },
   {
-  "PROPER_NAME": "AbsoluteValue",
+  "PROPER_NAME": "Absolute Value",
   "NAMES": [
-  "absolutevalue"
+  "Absolute Value",
+    "absolute value",
+    "absolute_value"
 ],
-  "DESCRIPTION": "Absolute value is a numbers distance from 0."
+  "DESCRIPTION": "Absolute value is a number's distance from 0."
   },
   {
-  "PROPER_NAME": "LilHit",
+  "PROPER_NAME": "Lil Hit",
   "NAMES": ["lilhit"],
   "DESCRIPTION": "A 0 cost card that deals 3 damage, grants 3 block, draws one card, and Exhausts."
   },
   {
-  "PROPER_NAME": "RisingWater",
+  "PROPER_NAME": "Rising Water",
   "NAMES": [
-    "risingwater"
+    "Rising Water",
+    "rising water",
+    "rising_water"
 ],
-  "DESCRIPTION": " At the end of your turn increase by one and deal damage to ALL enemies."
+  "DESCRIPTION": "At the end of your turn, deal damage to ALL enemies, then increase #yRising #yWater by #b1."
   },
 
   {
