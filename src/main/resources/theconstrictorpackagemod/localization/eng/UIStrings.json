@@ -12,5 +12,23 @@
       "This": "Contains pairs of Strings, used to get values based on keys.",
       "This is a key": "This is a value."
     }
+  },
+  "${modID}:CONSTRICTOR_MASTERY": {
+    "TEXT": [
+      "Constrictor Mastery",
+      "As The Constrictor, complete The Ending on Ascension Level 20."
+    ]
+  },
+  "${modID}:CHOKED_OUT": {
+    "TEXT": [
+      "Choked Out",
+      "As The Constrictor, defeat an Act 3 boss while you have at least 50 Constricting."
+    ]
+  },
+  "${modID}:I_AM_THE_TIDE": {
+    "TEXT": [
+      "I Am The Tide",
+      "Accumulate at least 50 Rising Water in a single combat."
+    ]
   }
 }

@@ -22,15 +22,12 @@ public class RoleReversal extends BaseCard {
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-
-
     private static final int BLOCK = 11;
     private static final int UPG_BLOCK = 3;
 
 
     public RoleReversal() {
         super(cardInfo);
-        this.exhaust = true;
 
         setMagic(2,1);
         setBlock(BLOCK, UPG_BLOCK);

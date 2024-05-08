@@ -5,7 +5,11 @@ import basemod.abstracts.CustomPlayer;
 import basemod.animations.SpriterAnimation;
 import com.badlogic.gdx.graphics.Texture;
 import com.megacrit.cardcrawl.cutscenes.CutscenePanel;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.ImageMaster;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
+import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theconstrictorpackagemod.cards.*;
 import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
@@ -23,6 +27,7 @@ import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
+import theconstrictorpackagemod.powers.ConstrictingPower;
 import theconstrictorpackagemod.relics.DustyRelic;
 
 import java.util.ArrayList;
@@ -100,8 +105,8 @@ public class MyCharacter extends CustomPlayer {
         retVal.add(BaseBlock.ID);
         retVal.add(BaseBlock.ID);
         retVal.add(BaseBlock.ID);
-        retVal.add(MyCard.ID);
         retVal.add(MyCard2.ID);
+        retVal.add(SinkingFeeling.ID);
 
         return retVal;
     }
@@ -222,6 +227,18 @@ public class MyCharacter extends CustomPlayer {
         panels.add(new CutscenePanel("theconstrictorpackagemod/character/select/Constrictor2.png"));// 314
         panels.add(new CutscenePanel("theconstrictorpackagemod/character/select/Constrictor3.png"));// 315
         return panels;// 316
+    }
+
+
+    public void onVictory() {
+        // Check if it's an Act 3 boss combat
+        if (AbstractDungeon.currMapNode != null && AbstractDungeon.currMapNode.getRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
+            // Check for the Constricting power on the player
+            AbstractPower constrictingPower = AbstractDungeon.player.getPower(makeID(ConstrictingPower.POWER_ID));
+            if (constrictingPower != null && constrictingPower.amount >= 50) {
+                UnlockTracker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
+            }
+        }
     }
 
     @Override

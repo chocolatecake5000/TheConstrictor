@@ -25,15 +25,14 @@ public class GoldenWave extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 5;
     private static final int UPG_DAMAGE = 2;
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 5;
     private static final int UPG_BLOCK = 2;
 
     public GoldenWave() {
         super(cardInfo);
-        this.exhaust = true;
         setDamage(DAMAGE,UPG_DAMAGE);
         setBlock(BLOCK,UPG_BLOCK);
         isMultiDamage = true;

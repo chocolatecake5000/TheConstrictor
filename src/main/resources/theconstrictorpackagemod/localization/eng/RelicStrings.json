@@ -24,7 +24,7 @@
     "NAME": "Strange Ring",
     "FLAVOR": "Very hard to eat and tasteless. 0/10.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL At the start of each combat, gain 10 #ytheconstrictor:Constricting."
+      "Gain [E] at the start of your turn. NL At the start of each combat, gain #b6 #ytheconstrictor:Constricting."
     ]
   },
   "${modID}:SlimyShield": {
@@ -38,7 +38,7 @@
     "NAME": "Marine Biologist",
     "FLAVOR": "Eyes the color of the ocean. They reminds me of home.",
     "DESCRIPTIONS": [
-      "At the start of each combat, gain 1 #ytheconstrictor:Blur."
+      "At the start of each combat, gain #b1 #ytheconstrictor:Blur."
     ]
   },
   "${modID}:LilFriend": {
@@ -59,7 +59,7 @@
     "NAME": "Polished Relic",
     "FLAVOR": "Well cared for by The Collector.",
     "DESCRIPTIONS": [
-      "At the start of each combat, draw #b2 additional cards and heal #b6 HP."
+      "At the start of the first #b3 turns of combat, draw #b1 additional card and heal #b3 HP."
     ]
   },
   "${modID}:DustyRelic": {

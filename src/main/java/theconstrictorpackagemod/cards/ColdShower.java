@@ -22,12 +22,9 @@ public class ColdShower extends BaseCard {
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-
-
-
     public ColdShower() {
         super(cardInfo);
-        setMagic(2,2);
+        setMagic(4,2);
     }
 
     @Override

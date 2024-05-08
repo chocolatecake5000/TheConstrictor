@@ -21,20 +21,18 @@ public class DeadlyGrip extends BaseCard {
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-
-
+    private static final int BASE_CONSTRICTING = 5;
+    private static final int UPGRADED_CONSTRICTING = 7;
 
     public DeadlyGrip() {
         super(cardInfo);
         setMagic(3,1);
-
-
     }
+
     public void use(AbstractPlayer p, AbstractMonster m) {
+        int constrictingAmount = upgraded ? UPGRADED_CONSTRICTING : BASE_CONSTRICTING;
+        this.addToBot(new ApplyPowerAction(m, p, new ConstrictingPower(m, p, constrictingAmount), constrictingAmount));
         this.addToBot(new ApplyPowerAction(m, p, new ChokePower(m, this.magicNumber), this.magicNumber));
-        this.addToBot(new ApplyPowerAction(m, p, new ConstrictingPower(m, p, this.magicNumber), this.magicNumber));
-
-
     }
 }
 

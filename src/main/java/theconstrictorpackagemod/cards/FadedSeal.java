@@ -15,7 +15,7 @@ public class FadedSeal extends BaseCard {
     public FadedSeal() {
         super(cardInfo);
         this.setBlock(10, 3);
-        this.upgRetain = true;
+        this.retain = true;
     }
 
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
@@ -31,7 +31,7 @@ public class FadedSeal extends BaseCard {
     }
 
     static {
-        cardInfo = new CardInfo("FadedSeal", -2, CardType.SKILL, CardTarget.SELF, CardRarity.COMMON, MyCharacter.Enums.CARD_COLOR);
+        cardInfo = new CardInfo("FadedSeal", -2, CardType.SKILL, CardTarget.SELF, CardRarity.UNCOMMON, MyCharacter.Enums.CARD_COLOR);
         ID = theconstrictormod.makeID(cardInfo.baseId);
     }
 }
