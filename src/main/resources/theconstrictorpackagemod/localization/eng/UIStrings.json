@@ -28,7 +28,7 @@
   "${modID}:I_AM_THE_TIDE": {
     "TEXT": [
       "I Am The Tide",
-      "As the Constrictor, accumulate at least 50 Rising Water in a single combat."
+      "As the Constrictor, accumulate at least 50 Rising Water."
     ]
   }
 }
