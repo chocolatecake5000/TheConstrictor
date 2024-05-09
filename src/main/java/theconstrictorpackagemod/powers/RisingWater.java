@@ -1,14 +1,15 @@
 package theconstrictorpackagemod.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import characterclass.MyCharacter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.*;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.unlock.UnlockTracker;
-import theconstrictorpackagemod.util.AchievementUnlockTracker;
+import theconstrictorpackagemod.util.ConstrictorAchievementUnlocker;
 
 
 import java.util.Iterator;
@@ -37,7 +38,10 @@ public class RisingWater extends BasePower implements CloneablePowerInterface {
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
         if (this.amount >= 50) {
-            AchievementUnlockTracker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("I_AM_THE_TIDE"));
+            AbstractPlayer p = AbstractDungeon.player;
+            if (p != null && p instanceof MyCharacter) {
+                ConstrictorAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("I_AM_THE_TIDE"));
+            }
         }
     }
 
