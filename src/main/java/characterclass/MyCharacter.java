@@ -28,6 +28,7 @@ import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theconstrictorpackagemod.powers.ConstrictingPower;
 import theconstrictorpackagemod.relics.DustyRelic;
 import theconstrictorpackagemod.theconstrictormod;
+import theconstrictorpackagemod.util.ConstrictorAchievementUnlocker;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -247,7 +248,7 @@ public class MyCharacter extends CustomPlayer {
             // Check for the Constricting power on the player
             AbstractPower constrictingPower = AbstractDungeon.player.getPower(makeID(ConstrictingPower.POWER_ID));
             if (constrictingPower != null && constrictingPower.amount >= 50) {
-                ModAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
+                ConstrictorAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
             }
         }
     }
