@@ -1,6 +1,5 @@
 package characterclass;
 
-import basemod.ModAchievementUnlocker;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Texture;

@@ -1,11 +1,8 @@
 package theconstrictorpackagemod;
 
-
-import basemod.AtlasLoader;
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theconstrictorpackagemod.cards.BaseCard;
