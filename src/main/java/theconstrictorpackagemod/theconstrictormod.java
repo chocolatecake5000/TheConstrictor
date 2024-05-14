@@ -4,17 +4,11 @@ package theconstrictorpackagemod;
 import basemod.AtlasLoader;
 import basemod.AutoAdd;
 import basemod.BaseMod;
-import basemod.ModAchievement;
 import basemod.interfaces.*;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import theconstrictorpackagemod.cards.BaseCard;
-import theconstrictorpackagemod.powers.ConstrictingPower;
 import theconstrictorpackagemod.relics.BaseRelic;
 import theconstrictorpackagemod.util.GeneralUtils;
 import theconstrictorpackagemod.util.KeywordInfo;
@@ -50,8 +44,7 @@ public class theconstrictormod implements
         EditCharactersSubscriber,
         EditKeywordsSubscriber,
         PostInitializeSubscriber,
-        EditCardsSubscriber,
-        EditAchievementsSubscriber {
+        EditCardsSubscriber {
     public static ModInfo info;
     public static String modID;
 
@@ -301,15 +294,6 @@ public class theconstrictormod implements
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new MyCharacter(),
                 CHAR_SELECT_BUTTON, getCharSelectPortrait(), theconstrictor);
-    }
-
-    @Override
-    public void receiveEditAchievements() {
-        TextureAtlas atlas = AtlasLoader.getAtlas("theconstrictorpackagemod/achievements/ConstrictorAchievements.atlas");
-
-        BaseMod.registerAchievement(theconstrictormod.modID, "chokedout", theconstrictormod.makeID("CHOKED_OUT"), false, atlas);
-        BaseMod.registerAchievement(theconstrictormod.modID, "iamthetide", theconstrictormod.makeID("I_AM_THE_TIDE"), false, atlas);
-        BaseMod.registerAchievement(theconstrictormod.modID, "constrictormastery", theconstrictormod.makeID("CONSTRICTOR_MASTERY"), false, atlas);
     }
 
 }
