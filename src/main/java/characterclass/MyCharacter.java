@@ -1,5 +1,6 @@
 package characterclass;
 
+import basemod.ModAchievementUnlocker;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Texture;
@@ -26,20 +27,15 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import theconstrictorpackagemod.powers.ConstrictingPower;
 import theconstrictorpackagemod.relics.DustyRelic;
-import theconstrictorpackagemod.util.ConstrictorAchievementUnlocker;
+import theconstrictorpackagemod.theconstrictormod;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import static theconstrictorpackagemod.theconstrictormod.characterPath;
-import static theconstrictorpackagemod.theconstrictormod.makeID;
-
-
+import static theconstrictorpackagemod.theconstrictormod.*;
 
 
 public class MyCharacter extends CustomPlayer {
-
-
 
     //Stats
     public static final int ENERGY_PER_TURN = 3;
@@ -56,10 +52,10 @@ public class MyCharacter extends CustomPlayer {
 
     //Image file paths
 
-    private static final String SUPEREPICCHARACTER = characterPath("constrictorbasic.png"); //Shoulder 1 and 2 are used at rest sites.
-    private static final String SHOULDER_1 = characterPath("shoulder.png"); //Shoulder 1 and 2 are used at rest sites.
-    private static final String SHOULDER_2 = characterPath("shoulder2.png");
-    private static final String CORPSE = characterPath("corpse.png"); //Corpse is when you die.
+    private String superEpicCharacter;
+    private String shoulder1;
+    private String shoulder2;
+    private String corpse;
 
     public static class Enums {
         //These are used to identify your character, as well as your character's card color.
@@ -74,20 +70,37 @@ public class MyCharacter extends CustomPlayer {
 
     public MyCharacter() {
         super(NAMES[0], Enums.theconstrictor,
-                new CustomEnergyOrb(null, null, null), //Energy Orb
-                null,null); //Animation
+                new CustomEnergyOrb(null, null, null), // Energy Orb
+                null, null); // Animation
 
-        initializeClass(SUPEREPICCHARACTER,
-                SHOULDER_2,
-                SHOULDER_1,
-                CORPSE,
+        // Initialize paths with default skin
+        updateCharacterSkin(theconstrictormod.getSkinIndex());
+
+        initializeClass(this.superEpicCharacter, // Dynamic path based on selected skin
+                this.shoulder2, // Dynamic path based on selected skin
+                this.shoulder1, // Dynamic path based on selected skin
+                this.corpse, // Dynamic path based on selected skin
                 getLoadout(),
-                20.0F, -20.0F, 200.0F, 250.0F, //Character hitbox. x y position, then width and height.
+                20.0F, -20.0F, 200.0F, 250.0F, // Character hitbox. x y position, then width and height.
                 new EnergyManager(ENERGY_PER_TURN));
 
-        //Location for text bubbles. You can adjust it as necessary later. For most characters, these values are fine.
+        // Location for text bubbles. Adjust as necessary later.
         dialogX = (drawX + 0.0F * Settings.scale);
         dialogY = (drawY + 220.0F * Settings.scale);
+    }
+
+    public void updateCharacterSkin(int skinIndex) {
+        // Update paths according to selected skin index
+        this.superEpicCharacter = characterPath("constrictorbasic_" + skinIndex + ".png");
+        this.shoulder1 = characterPath("shoulder_" + skinIndex + ".png");
+        this.shoulder2 = characterPath("shoulder2_" + skinIndex + ".png");
+        this.corpse = characterPath("corpse_" + skinIndex + ".png");
+
+        // Update the character sprites if needed after initialization
+        if (this.img != null) {
+            this.img.dispose(); // Dispose of old image
+            this.img = ImageMaster.loadImage(this.superEpicCharacter);
+        }
     }
 
     @Override
@@ -171,13 +184,13 @@ public class MyCharacter extends CustomPlayer {
     public void doCharSelectScreenSelectEffect() {
         //This occurs when you click the character's button in the character select screen.
         //See SoundMaster for a full list of existing sound effects, or look at BaseMod's wiki for adding custom audio.
-        CardCrawlGame.sound.playA("ATTACK_DAGGER_2", MathUtils.random(-0.2F, 0.2F));
+        CardCrawlGame.sound.playA("POWER_CONSTRICTED", MathUtils.random(-0.05F, 0.05F));
         CardCrawlGame.screenShake.shake(ScreenShake.ShakeIntensity.MED, ScreenShake.ShakeDur.SHORT, false);
     }
     @Override
     public String getCustomModeCharacterButtonSoundKey() {
         //Similar to doCharSelectScreenSelectEffect, but used for the Custom mode screen. No shaking.
-        return "ATTACK_DAGGER_2";
+        return "POWER_CONSTRICTED";
     }
 
     //Don't adjust these four directly, adjust the contents of the CharacterStrings.json file.
@@ -234,7 +247,7 @@ public class MyCharacter extends CustomPlayer {
             // Check for the Constricting power on the player
             AbstractPower constrictingPower = AbstractDungeon.player.getPower(makeID(ConstrictingPower.POWER_ID));
             if (constrictingPower != null && constrictingPower.amount >= 50) {
-                ConstrictorAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
+                ModAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
             }
         }
     }

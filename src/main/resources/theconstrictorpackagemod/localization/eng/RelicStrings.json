@@ -24,7 +24,7 @@
     "NAME": "Strange Ring",
     "FLAVOR": "Very hard to eat and tasteless. 0/10.",
     "DESCRIPTIONS": [
-      "Gain [E] at the start of your turn. NL At the start of each combat, gain #b6 #ytheconstrictor:Constricting."
+      "Gain [E] at the start of your turn. At the start of each combat, gain #b6 #ytheconstrictor:Constricting."
     ]
   },
   "${modID}:SlimyShield": {
