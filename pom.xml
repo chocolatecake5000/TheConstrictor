@@ -53,7 +53,7 @@
                 in the left sidebar under External Libraries and don't need to be accurate.-->
             <version>5.44.0</version>
             <scope>system</scope>
-            <systemPath>C:/Program Files (x86)/Steam/steamapps/common/SlayTheSpire/mods/BaseMod.jar</systemPath>
+            <systemPath>${Steam.path}/workshop/content/646570/1605833019/BaseMod.jar</systemPath>
         </dependency>
         <dependency>
             <groupId>com.evacipated.cardcrawl.mod</groupId>
