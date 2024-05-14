@@ -1,5 +1,6 @@
 package characterclass;
 
+import basemod.BaseMod;
 import basemod.abstracts.CustomEnergyOrb;
 import basemod.abstracts.CustomPlayer;
 import com.badlogic.gdx.graphics.Texture;
@@ -244,8 +245,10 @@ public class MyCharacter extends CustomPlayer {
     public void onVictory() {
         // Check if it's an Act 3 boss combat
         if (AbstractDungeon.currMapNode != null && AbstractDungeon.currMapNode.getRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
+
             // Check for the Constricting power on the player
-            AbstractPower constrictingPower = AbstractDungeon.player.getPower(makeID(ConstrictingPower.POWER_ID));
+            AbstractPower constrictingPower = AbstractDungeon.player.getPower(ConstrictingPower.POWER_ID);
+
             if (constrictingPower != null && constrictingPower.amount >= 50) {
                 ConstrictorAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
             }
