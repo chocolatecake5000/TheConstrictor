@@ -94,7 +94,7 @@
   },
   "${modID}:SlackTide": {
     "NAME": "Slack Tide",
-    "DESCRIPTION": "Gain !B! Block. NL The next Attack you play costs 0."
+    "DESCRIPTION": "Gain !B! Block. NL Lose theconstrictor:Constricting equal to Block gained."
   },
   "${modID}:SludgeWave": {
     "NAME": "Sludge Wave",
@@ -351,6 +351,6 @@
   },
   "${modID}:SinkingFeeling": {
     "NAME": "Sinking Feeling",
-    "DESCRIPTION": "ALL enemies take damage equal to twice their theconstrictor:Constricting. NL Grave."
+    "DESCRIPTION": "ALL enemies lose HP equal to twice their theconstrictor:Constricting. NL Grave."
   }
 }
