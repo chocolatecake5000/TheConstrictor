@@ -1,16 +1,11 @@
-
 package theconstrictorpackagemod.cards;
 
-import basemod.helpers.dynamicvariables.MagicNumberVariable;
 import characterclass.MyCharacter;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ThornsPower;
-import com.megacrit.cardcrawl.powers.watcher.FreeAttackPower;
 import theconstrictorpackagemod.powers.ConstrictingPower;
 import theconstrictorpackagemod.util.CardInfo;
 
