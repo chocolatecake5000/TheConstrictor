@@ -26,22 +26,20 @@ public class Hunger extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
     private static final int BLOCK = 9;
     private static final int UPG_BLOCK = 2;
 
     public Hunger() {
         super(cardInfo);
         setBlock(BLOCK,UPG_BLOCK);
-setMagic(1,1);
+setMagic(1);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         this.addToBot(new ReinforcedBodyAction(p, this.block, this.freeToPlayOnce, this.energyOnUse));
-        this.addToBot(new ExhaustAction(magicNumber, false,true,true));
+        this.addToBot(new ExhaustAction(magicNumber, false));
     }
-
 
 }
 

@@ -23,11 +23,9 @@ public class Headache extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
     public Headache() {
         super(cardInfo);
-        this.cardsToPreview = new LastGasp();
+        this.cardsToPreview = new ShiningLight();
         setSelfRetain(false, true);
         setMagic(1,1);
     }

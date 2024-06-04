@@ -28,7 +28,7 @@ public class BufferedSlam extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 3;
+    private static final int UPG_DAMAGE = 7;
 
 
     public BufferedSlam() {

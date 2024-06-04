@@ -28,16 +28,12 @@ public class StrangledStrike extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
     public StrangledStrike() {
         super(cardInfo);
         tags.add(CardTags.STRIKE);
-        this.baseDamage = 6;
+        this.setDamage(6, 4);
         this.baseMagicNumber = (1);
         this.magicNumber = this.baseMagicNumber;
-        this.exhaust = true;
-        this.upgRetain = true;
     }
 
     public void use(AbstractPlayer p, AbstractMonster m) {

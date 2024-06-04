@@ -21,23 +21,21 @@ public class Freedom extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
     public Freedom() {
         super(cardInfo);
-        this.selfRetain = true;
         this.exhaust = true;
+        setMagic(20,5);
     }
     public void upgrade() {
         if (!this.upgraded) {
             this.upgradeName();
-            this.upgradeBaseCost(0);
+            this.upgradeMagicNumber(5);
         }
 
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConstrictingPower(AbstractDungeon.player, p, -20), -20));
+        this.addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConstrictingPower(AbstractDungeon.player, p, -magicNumber), -magicNumber));
     }
 }

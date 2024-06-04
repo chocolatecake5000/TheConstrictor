@@ -18,13 +18,10 @@ public class Painless extends BaseCard {
             1,
             CardType.POWER,
             CardTarget.SELF,
-            CardRarity.RARE,
+            CardRarity.UNCOMMON,
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-
-
-
 
     public Painless() {
         super(cardInfo);

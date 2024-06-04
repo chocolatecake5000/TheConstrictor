@@ -1,0 +1,47 @@
+ConstrictorAchievements.png
+size: 640,640
+format: RGB888
+filter: Linear,Linear
+repeat: none
+locked/constrictormastery
+  rotate: false
+  xy: 0, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/constrictormastery
+  rotate: false
+  xy: 160, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/chokedout
+  rotate: false
+  xy: 320, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/chokedout
+  rotate: false
+  xy: 480, 0
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+locked/iamthetide
+  rotate: false
+  xy: 0, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1
+unlocked/iamthetide
+  rotate: false
+  xy: 160, 160
+  size: 160, 160
+  orig: 160, 160
+  offset: 0, 0
+  index: -1

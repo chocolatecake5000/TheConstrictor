@@ -24,7 +24,7 @@
   },
   "${modID}:GoldenWave": {
     "NAME": "Golden Wave",
-    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage to ALL enemies X times. NL Gain !B! Block X times."
   },
   "${modID}:Thirst": {
     "NAME": "Thirst",
@@ -32,7 +32,7 @@
   },
   "${modID}:Memory": {
     "NAME": "Memory",
-    "DESCRIPTION": "Put !M! cards from your discard pile into your hand. NL Exhaust."
+    "DESCRIPTION": "Ethereal. NL Put !M! cards from your discard pile into your hand."
   },
   "${modID}:ShieldSlammer": {
     "NAME": "Shield Slammer",
@@ -94,7 +94,7 @@
   },
   "${modID}:SlackTide": {
     "NAME": "Slack Tide",
-    "DESCRIPTION": "Gain !B! Block. NL The next Attack you play costs 0."
+    "DESCRIPTION": "Gain !B! Block. NL Lose theconstrictor:Constricting equal to Block gained."
   },
   "${modID}:SludgeWave": {
     "NAME": "Sludge Wave",
@@ -115,7 +115,7 @@
   },
   "${modID}:Flood": {
     "NAME": "Flood",
-    "DESCRIPTION": "Innate. NL Gain !M! theconstrictor:Rising_Water."
+    "DESCRIPTION": "Whenever you gain theconstrictor:Rising_Water, gain !M! more."
   },
   "${modID}:ColdShower": {
     "NAME": "Cold Shower",
@@ -128,7 +128,7 @@
   },
   "${modID}:RoleReversal": {
     "NAME": "Role Reversal",
-    "DESCRIPTION": "Gain !B! Block. NL Gain !M! theconstrictor:Rising_Water. NL Exhaust."
+    "DESCRIPTION": "Gain !B! Block. NL Gain !M! theconstrictor:Rising_Water."
   },
   "${modID}:SweptAway": {
     "NAME": "Swept Away",
@@ -144,8 +144,7 @@
   },
   "${modID}:Hunger": {
     "NAME": "Hunger",
-    "DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! card.",
-    "UPGRADE_DESCRIPTION": "Gain !B! Block X Times. NL Exhaust up to !M! cards."
+    "DESCRIPTION": "Gain !B! Block X Times. NL Exhaust 1 card."
   },
   "${modID}:Painless": {
     "NAME": "Painless",
@@ -162,8 +161,7 @@
   },
   "${modID}:FadedSeal": {
     "NAME": "Faded Seal",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Unplayable. NL If this card is Exhausted, gain !B! Block."
+    "DESCRIPTION": "Retain. NL Unplayable. NL If this card is Exhausted, gain !B! Block."
   },
   "${modID}:LoadOff": {
     "NAME": "Load Off",
@@ -171,8 +169,8 @@
   },
   "${modID}:Headache": {
     "NAME": "Headache",
-    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add *A *Last *Gasp into your hand.",
-    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted, add *A *Last *Gasp into your hand."
+    "DESCRIPTION": "Unplayable. NL If this card is Exhausted, add a *Shining *Light into your hand.",
+    "UPGRADE_DESCRIPTION": "Unplayable. NL Retain. NL If this card is Exhausted, add a *Shining *Light into your hand."
   },
   "${modID}:StickyPenny": {
     "NAME": "Sticky Penny",
@@ -193,12 +191,11 @@
   },
   "${modID}:FroggyMode": {
     "NAME": "Froggy Mode",
-    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity."
+    "DESCRIPTION": "Gain !M! Strength. NL Gain !M! Dexterity. NL Draw 1 card."
   },
   "${modID}:StrangledStrike": {
     "NAME": "Strangled Strike",
-    "DESCRIPTION": "Deal !D! damage. NL The theconstrictor:Absolute_Value of your theconstrictor:Constricting affects this card. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Retain. NL Deal !D! damage. NL The theconstrictor:Absolute_Value of your theconstrictor:Constricting affects this card. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL The theconstrictor:Absolute_Value of your theconstrictor:Constricting affects this card."
   },
   "${modID}:EldrichForm": {
     "NAME": "Eldritch Form",
@@ -208,7 +205,7 @@
   "${modID}:LastGasp": {
     "NAME": "Last Gasp",
     "DESCRIPTION": "Draw 2 cards. NL Gain [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Draw 2 cards. NL Gain [E]. NL cExhaust."
+    "UPGRADE_DESCRIPTION": "Innate. NL Draw 2 cards. NL Gain [E]. NL Exhaust."
   },
   "${modID}:Evolution": {
     "NAME": "Evolution",
@@ -227,7 +224,8 @@
   },
   "${modID}:DeadlyGrip": {
     "NAME": "Deadly Grip",
-    "DESCRIPTION": "Apply !M! theconstrictor:Constricting. NL Whenever you play a card this turn, the enemy loses !M! HP."
+    "DESCRIPTION": "Apply 5 theconstrictor:Constricting. NL Whenever you play a card this turn, the enemy loses !M! HP.",
+    "UPGRADE_DESCRIPTION": "Apply 7 theconstrictor:Constricting. NL Whenever you play a card this turn, the enemy loses !M! HP."
   },
   "${modID}:BigLilHit": {
     "NAME": "Big Lil Hit",
@@ -255,15 +253,11 @@
   },
   "${modID}:DamSlam": {
     "NAME": "Dam Slam",
-    "DESCRIPTION": "Deal !D! damage. NL Gain !M! theconstrictor:Rising_Water. NL Exhaust."
+    "DESCRIPTION": "Deal !D! damage. NL Gain !M! theconstrictor:Rising_Water."
   },
   "${modID}:Tentacle": {
     "NAME": "Talk To The Tentacle",
     "DESCRIPTION": "Deal !D! damage. NL Whenever you attack this enemy, gain !M! Block. NL Exhaust."
-  },
-  "${modID}:Rest": {
-    "NAME": "Rest",
-    "DESCRIPTION": "Put !M! cards from your discard pile into your hand and Retain them. NL End your turn."
   },
   "${modID}:Stare": {
     "NAME": "Stare",
@@ -271,7 +265,7 @@
   },
   "${modID}:IntoIt": {
     "NAME": "Into It",
-    "DESCRIPTION": "Gain 3 Block. NL If your theconstrictor:Constricting is positive, gain !M! additional Block."
+    "DESCRIPTION": "Gain !B! Block. NL If your theconstrictor:Constricting is positive, gain !M! additional Block."
   },
   "${modID}:SecretCash": {
     "NAME": "Secret Cache",
@@ -279,7 +273,7 @@
   },
   "${modID}:Freedom": {
     "NAME": "Freedom",
-    "DESCRIPTION": "Retain. NL Lose 20 theconstrictor:Constricting. NL Exhaust."
+    "DESCRIPTION": "Lose !M! theconstrictor:Constricting. NL Exhaust."
   },
   "${modID}:ChumInTheWater": {
     "NAME": "Chum In The Water",
@@ -322,11 +316,6 @@
     "DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile into your hand. NL Exhaust.",
     "UPGRADE_DESCRIPTION": "Deal !D! damage. NL Put a card from your discard pile into your hand."
   },
-  "${modID}:MasterFate": {
-    "NAME": "Master Fate",
-    "DESCRIPTION": "Whenever a card is created during combat, Upgrade it.",
-    "UPGRADE_DESCRIPTION": "Innate. NL Whenever a card is created during combat, Upgrade it."
-  },
   "${modID}:SwordfishSlam": {
     "NAME": "Swordfish Slam",
     "DESCRIPTION": "Deal !D! damage X times."
@@ -337,7 +326,7 @@
   },
   "${modID}:BathTime": {
     "NAME": "Bath Time",
-    "DESCRIPTION": "Innate. NL Reduce your theconstrictor:Constricting by !M!. NL Exhaust."
+    "DESCRIPTION": "Innate. NL Gain !M! temporary Strength and !M! temporary Dexterity. NL Exhaust."
   },
   "${modID}:AnchorTime": {
     "NAME": "Anchor Time",
@@ -359,5 +348,9 @@
   "${modID}:SmellyFish": {
     "NAME": "Smelly Fish",
     "DESCRIPTION": "At the start of your turn, apply !M! theconstrictor:Constricting to ALL enemies."
+  },
+  "${modID}:SinkingFeeling": {
+    "NAME": "Sinking Feeling",
+    "DESCRIPTION": "ALL enemies lose HP equal to twice their theconstrictor:Constricting. NL Grave."
   }
 }
