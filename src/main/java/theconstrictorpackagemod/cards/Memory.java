@@ -25,11 +25,9 @@ public class Memory extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
     public Memory() {
         super(cardInfo);
-        this.exhaust = true;
+        this.isEthereal = true;
         setMagic(2,1);
 
     }

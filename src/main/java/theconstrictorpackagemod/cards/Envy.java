@@ -22,12 +22,10 @@ public class Envy extends BaseCard {
             0,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.COMMON,
+            CardRarity.UNCOMMON,
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-
-
 
     public Envy() {
         super(cardInfo);

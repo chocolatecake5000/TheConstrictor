@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.actions.common.RelicAboveCreatureAction;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import theconstrictorpackagemod.powers.ConstrictingPower;
 import theconstrictorpackagemod.relics.BaseRelic;
 
@@ -26,13 +27,31 @@ public class PolishedRelic extends BaseRelic {
     }
 
     public void atBattleStart() {
-        this.flash();
-        this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
-        this.addToBot(new DrawCardAction(AbstractDungeon.player, 2));
-        AbstractPlayer p = AbstractDungeon.player;
-        if (p.currentHealth > 0) {
-            p.heal(6);
+        this.counter = 3;
+    }
+
+    @Override
+    public void atTurnStart() {
+        if (counter > 0) {
+            this.flash();
+            this.addToBot(new RelicAboveCreatureAction(AbstractDungeon.player, this));
+            this.addToBot(new DrawCardAction(AbstractDungeon.player, 1));
+            AbstractPlayer p = AbstractDungeon.player;
+            if (p.currentHealth > 0) {
+                p.heal(3);
+            }
+            counter--;
+
+            if (counter == 0) {
+                this.grayscale = true;
+            }
         }
+    }
+
+    @Override
+    public void onVictory() {
+        this.counter = -1;
+        this.stopPulse();
     }
 
     @Override
@@ -48,6 +67,10 @@ public class PolishedRelic extends BaseRelic {
         } else {
             super.obtain();
         }
+    }
+
+    public void justEnteredRoom(AbstractRoom room) {
+        this.grayscale = false;
     }
 
     @Override

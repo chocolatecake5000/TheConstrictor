@@ -30,13 +30,9 @@ public class Stare extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
-
-
     public Stare() {
         super(cardInfo);
-        setMagic(24,6);
+        setMagic(28,6);
     }
 
     @Override

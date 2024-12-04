@@ -21,7 +21,7 @@ public class Chess extends BaseCard {
             0,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.UNCOMMON,
+            CardRarity.RARE,
             MyCharacter.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);

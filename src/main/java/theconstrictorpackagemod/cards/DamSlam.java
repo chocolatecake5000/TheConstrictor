@@ -1,4 +1,4 @@
-package theconstrictorpackagemod.cards;
+    package theconstrictorpackagemod.cards;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,12 +25,11 @@ public class DamSlam extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 1;
 
 
     public DamSlam() {
         super(cardInfo);
-        this.exhaust = true;
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(1,1);
     }

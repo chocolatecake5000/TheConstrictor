@@ -25,12 +25,9 @@ public class DolfinDance extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-
-
-
     public DolfinDance() {
         super(cardInfo);
-        setMagic(1,1);
+        setMagic(2,1);
     }
 
     @Override

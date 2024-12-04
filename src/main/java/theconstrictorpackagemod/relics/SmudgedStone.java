@@ -21,11 +21,11 @@ import static theconstrictorpackagemod.theconstrictormod.makeID;
 public class SmudgedStone extends BaseRelic {
     private static final String NAME = "SmudgedStone"; //The name will be used for determining the image file as well as the ID.
     public static final String ID = makeID(NAME); //This adds the mod's prefix to the relic ID, resulting in modID:MyRelic
-    private static final RelicTier RARITY = RelicTier.UNCOMMON; //The relic's rarity.
+    private static final RelicTier RARITY = RelicTier.RARE; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.CLINK; //The sound played when the relic is clicked.
 
     public SmudgedStone() {
-        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RelicTier.UNCOMMON, LandingSound.CLINK);
+        super(ID, NAME, MyCharacter.Enums.CARD_COLOR, RelicTier.RARE, LandingSound.CLINK);
     }
 
     public void onUseCard(AbstractCard card, UseCardAction action) {

@@ -20,7 +20,7 @@ public class StrangeRing extends BaseRelic {
 
     public void atPreBattle() {
         this.flash();
-        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConstrictingPower(AbstractDungeon.player, AbstractDungeon.player, 10), 10));
+        this.addToTop(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new ConstrictingPower(AbstractDungeon.player, AbstractDungeon.player, 6), 6));
         this.addToTop(new RelicAboveCreatureAction(AbstractDungeon.player, this));
     }
     public void onEquip() {

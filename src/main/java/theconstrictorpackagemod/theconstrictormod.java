@@ -1,12 +1,23 @@
 package theconstrictorpackagemod;
 
-
 import basemod.AutoAdd;
 import basemod.BaseMod;
 import basemod.interfaces.*;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
+import theconstrictorpackagemod.achievements.ConstrictorAchievementGrid;
 import theconstrictorpackagemod.cards.BaseCard;
+import theconstrictorpackagemod.powers.ConstrictingPower;
+import theconstrictorpackagemod.powers.NextCombatBlockPower;
 import theconstrictorpackagemod.relics.BaseRelic;
+import theconstrictorpackagemod.util.ConstrictorAchievementUnlocker;
 import theconstrictorpackagemod.util.GeneralUtils;
 import theconstrictorpackagemod.util.KeywordInfo;
 import theconstrictorpackagemod.util.TextureLoader;
@@ -27,11 +38,9 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import static characterclass.MyCharacter.Enums.theconstrictor;
 
@@ -43,7 +52,10 @@ public class theconstrictormod implements
         EditCharactersSubscriber,
         EditKeywordsSubscriber,
         PostInitializeSubscriber,
-        EditCardsSubscriber {
+        EditCardsSubscriber,
+        OnStartBattleSubscriber,
+        PostBattleSubscriber,
+        StartGameSubscriber {
     public static ModInfo info;
     public static String modID;
 
@@ -63,10 +75,17 @@ public class theconstrictormod implements
     private static final String ENERGY_ORB = characterPath("cardback/energy_orb.png");
     private static final String ENERGY_ORB_P = characterPath("cardback/energy_orb_p.png");
     private static final String SMALL_ORB = characterPath("cardback/small_orb.png");
+    public static SpireConfig modConfig = null;
     private static final com.badlogic.gdx.graphics.Color cardColor = new Color(51f / 255f, 153f / 255f, 250f / 255f, 1f);
 
     private static final String CHAR_SELECT_BUTTON = characterPath("select/button.png");
-    private static final String CHAR_SELECT_PORTRAIT = characterPath("select/Portrait.png");
+    public static String getCharSelectPortrait() {
+        return characterPath("select/Portrait_" + getSkinIndex() + ".png");
+    }
+    private static final String[] SKIN_OPTIONS = {"Default", "AVGN", "Frost", "The \"Adventurer\"", "The \"Packmaster\"", "\"Robot Space Explorer\""};
+    public static int nextCombatBlock = 0;
+    public static ConstrictorAchievementGrid constrictorAchievementGrid;
+
 
     //This is used to prefix the IDs of various objects like cards and relics,
     //to avoid conflicts between different mods using the same name for things.
@@ -77,11 +96,20 @@ public class theconstrictormod implements
     //This will be called by ModTheSpire because of the @SpireInitializer annotation at the top of the class.
     public static void initialize() {
 
+
         new theconstrictormod();
         BaseMod.addColor(MyCharacter.Enums.CARD_COLOR, cardColor,
                 BG_ATTACK, BG_SKILL, BG_POWER, ENERGY_ORB,
                 BG_ATTACK_P, BG_SKILL_P, BG_POWER_P, ENERGY_ORB_P,
                 SMALL_ORB);
+
+        try {
+            Properties defaults = new Properties();
+            defaults.put("skinIndex", "0");
+            modConfig = new SpireConfig(modID, "constrictorConfig", defaults);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
 
     }
 
@@ -105,7 +133,34 @@ public class theconstrictormod implements
 //        .setDefaultSeen(true) //And marks them as seen in the compendium
 //        .cards(); //Adds the cards) { //somewhere in the class
 
+    public static int getSkinIndex() {
+        return modConfig == null ? 0 : modConfig.getInt("skinIndex");
+    }
 
+    public static void setSkinIndex(int index) {
+        if (modConfig != null) {
+            modConfig.setInt("skinIndex", index);
+            try {
+                modConfig.save();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public static void incrementSkinIndex(MyCharacter character) {
+        int currentIndex = getSkinIndex();
+        int newIndex = (currentIndex + 1) % SKIN_OPTIONS.length;
+        setSkinIndex(newIndex);
+        character.updateCharacterSkin(newIndex);
+    }
+
+    public static void decrementSkinIndex(MyCharacter character) {
+        int currentIndex = getSkinIndex();
+        int newIndex = (currentIndex - 1 + SKIN_OPTIONS.length) % SKIN_OPTIONS.length;
+        setSkinIndex(newIndex);
+        character.updateCharacterSkin(newIndex);
+    }
 
     @Override
     public void receivePostInitialize() {
@@ -114,6 +169,7 @@ public class theconstrictormod implements
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+        constrictorAchievementGrid = new ConstrictorAchievementGrid();
     }
 
     /*----------Localization----------*/
@@ -191,6 +247,38 @@ public class theconstrictormod implements
         }
     }
 
+    public void receivePostBattle(AbstractRoom abstractRoom) {
+        AbstractPlayer p = AbstractDungeon.player;
+        if (p.hasPower(NextCombatBlockPower.POWER_ID)) {
+            nextCombatBlock = p.getPower(NextCombatBlockPower.POWER_ID).amount;
+        }
+        if (AbstractDungeon.currMapNode != null && p instanceof MyCharacter && AbstractDungeon.currMapNode.getRoom() instanceof MonsterRoomBoss && AbstractDungeon.actNum == 3) {
+
+            // Check for the Constricting power on the player
+            AbstractPower constrictingPower = AbstractDungeon.player.getPower(ConstrictingPower.POWER_ID);
+
+            if (constrictingPower != null && constrictingPower.amount >= 30) {
+                ConstrictorAchievementUnlocker.unlockAchievement(theconstrictorpackagemod.theconstrictormod.makeID("CHOKED_OUT"));
+            }
+        }
+    }
+
+    public void receiveOnBattleStart(AbstractRoom abstractRoom) {
+        if (nextCombatBlock > 0) {
+            AbstractPlayer p = AbstractDungeon.player;
+            AbstractDungeon.actionManager.addToBottom(new GainBlockAction(p, p, nextCombatBlock));
+            nextCombatBlock = 0; // Reset the block amount for the next combat
+        }
+    }
+
+
+    @Override
+    public void receiveStartGame() {
+        if (!CardCrawlGame.loadingSave) {
+            nextCombatBlock = 0;
+        }
+    }
+
     private void registerKeyword(KeywordInfo info) {
         BaseMod.addKeyword(modID.toLowerCase(), info.PROPER_NAME, info.NAMES, info.DESCRIPTION);
     }
@@ -251,9 +339,7 @@ public class theconstrictormod implements
     @Override
     public void receiveEditCharacters() {
         BaseMod.addCharacter(new MyCharacter(),
-                CHAR_SELECT_BUTTON, CHAR_SELECT_PORTRAIT, theconstrictor);
+                CHAR_SELECT_BUTTON, getCharSelectPortrait(), theconstrictor);
     }
-
-
 
 }
